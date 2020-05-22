@@ -6,8 +6,7 @@
 
 # launches a random shell color-script at start. Scripts are located
 # at ~/bin/color-scripts
-~/bin/colorscript.sh
-# ~/bin/color-scripts/ghosts
+# ~/bin/colorscript.sh
 
 # This is so that partial lines don't end with %
 export PROMPT_EOL_MARK=''
