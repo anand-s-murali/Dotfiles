@@ -2,12 +2,12 @@
 #neofetch
 
 # cosway message :)
-fortune | cowsay -f vader
-#echo -ne '\n'
-#echo -ne '\n'
-#echo -ne '\n'
-#echo -ne '\n'
-#echo -ne '\n'
+# fortune | cowthink You\'re an interesting species. An interesting mix. You\'re capable of such beautiful dreams, and such horrible nightmares. You feel so lost, so cut off, so alone, only you\'re not. See, in all our searching, the only thing we\'ve found that makes the emptiness bearable, is each other.
+
+# launches a random shell color-script at start. Scripts are located
+# at ~/bin/color-scripts
+~/bin/colorscript.sh
+# ~/bin/color-scripts/ghosts
 
 # This is so that partial lines don't end with %
 export PROMPT_EOL_MARK=''
@@ -22,8 +22,8 @@ export ZSH="/Users/anandmurali/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="spaceship"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
 
+export PATH=~/bin:$PATH
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
