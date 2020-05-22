@@ -9,9 +9,10 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'VundleVim/Vundle.vim'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
 
 " -- Color schemes -- "
 "Plugin 'altercation/vim-colors-solarized'
@@ -20,6 +21,9 @@ Plugin 'arcticicestudio/nord-vim'
 " -- End color schemes -- "
 " Vim-Go "
 Plugin 'fatih/vim-go'
+
+" nerd-tree
+Plugin 'preservim/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,6 +59,7 @@ set noexpandtab
 
 set smarttab
 set number
+" set relativenumber
 set encoding=utf-8
 set backspace=indent,eol,start " Needed to allow backspaces ¯\_(ツ)_/¯ "
 set spell spelllang=en_us "used for spell check. Find a mispelled word by typing ]s and then z= for correction :)"
@@ -66,8 +71,15 @@ set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-" For some reason this prevents vim from reusing comments on the next line
-"set paste
-
 " Vertical bar so source doesn't exceed 80 chars per line
 set colorcolumn=80
+set hlsearch " highlights all occurrences of search result
+
+" Lightline stuff
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
+" NerdTree bind (CTRL-n)
+map <C-n> :NERDTreeToggle<CR>
